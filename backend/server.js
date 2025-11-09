@@ -110,5 +110,7 @@ app.delete("/delete_banner/:filename", (req, res) => {
 
 // Serve uploads (for both sections)
 app.use("/uploads", express.static("uploads"));
-
+app.get("/", (req, res) => {
+  res.send("Server is running 🚀");
+});
 app.listen(5000, () => console.log("Server running on port 5000"));
