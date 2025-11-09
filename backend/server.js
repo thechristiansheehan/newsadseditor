@@ -82,7 +82,7 @@ app.post("/upload_banner", uploadBanner.single("file"), (req, res) => {
   if (!file)
     return res.status(400).json({ message: "No file uploaded." });
 
-  const imageUrl = `http://localhost:5000/uploads/banners/${file.originalname}`;
+  const imageUrl = `https://newsadseditor-production.up.railway.app/uploads/banners/${file.originalname}`;
 
   res.json({
     message: "Banner uploaded successfully!",
